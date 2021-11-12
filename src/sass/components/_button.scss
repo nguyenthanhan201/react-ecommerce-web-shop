@@ -8,6 +8,35 @@
   cursor: pointer;
   overflow: hidden;
   position: relative;
+  padding: 2px;
+  outline: 0;
+  font-size: 17px;
+  color: rgb(255, 255, 255);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#fdde5c),
+    color-stop(#f8ab5e),
+    color-stop(#f56a62),
+    color-stop(#a176c8),
+    color-stop(#759beb),
+    color-stop(#65beb3),
+    to(#70db96)
+  );
+  border: linear-gradient(
+    to right,
+    #fdde5c,
+    #f8ab5e,
+    #f56a62,
+    #a176c8,
+    #759beb,
+    #65beb3,
+    #70db96
+  );
+  border-radius: 30px;
+  box-shadow: none;
+  cursor: pointer;
 
   @include mobile {
     font-size: 1rem;

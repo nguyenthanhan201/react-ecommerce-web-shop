@@ -13,32 +13,32 @@ const HeroSlider = props => {
 
   const [activeSlide, setActiveSlide] = useState(0);
 
-  const nextSlide = useCallback( () =>{
+  const nextSlide = useCallback(() => {
     const index = activeSlide + 1 === data.length ? 0 : activeSlide + 1
     setActiveSlide(index)
-  },[activeSlide, data],)
+  }, [activeSlide, data])
 
-  const preSlide = () =>{
-    const index = activeSlide -1 < 0 ? data.length - 1 : activeSlide - 1
+  const preSlide = () => {
+    const index = activeSlide - 1 < 0 ? data.length - 1 : activeSlide - 1
     setActiveSlide(index)
   }
 
   useEffect(() => {
-    if(props.auto){
+    if (props.auto) {
       const slideAuto = setInterval(() => {
         nextSlide()
-      },timeOut);
+      }, timeOut);
       return () => {
-      clearInterval(slideAuto)
+        clearInterval(slideAuto)
+      }
     }
-    }
-  }, [nextSlide,timeOut,props])
+  }, [nextSlide, timeOut, props])
 
   return (
     <div className='hero-slider'>
       {
-        data.map((item,index) => (
-          <HeroSliderItem key={index} item={item} active={index === activeSlide}/>
+        data.map((item, index) => (
+          <HeroSliderItem key={index} item={item} active={index === activeSlide} />
         ))
       }
       {
@@ -70,7 +70,7 @@ HeroSlider.propTypes = {
 }
 
 const HeroSliderItem = props => (
-  <div className={`hero-slider_item ${props.active ? 'active' : ''}`}> 
+  <div className={`hero-slider_item ${props.active ? 'active' : ''}`}>
     <div className="hero-slider_item_info">
       <div className={`hero-slider_item_info_title color-${props.item.color}`}>
         <span>{props.item.title}</span>
@@ -80,12 +80,12 @@ const HeroSliderItem = props => (
       </div>
       <div className="hero-slider_item_info_btn">
         <Link to={props.item.path}>
-          <Button 
-          backgroundColor={props.item.color}
-          icon="bx bx-cart"
-          animate={true}
+          <Button
+            backgroundColor={props.item.color}
+            icon="bx bx-cart"
+            animate={true}
           >
-            xem chi tiet
+            xem chi tiết
           </Button>
         </Link>
       </div>

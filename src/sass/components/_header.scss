@@ -35,7 +35,7 @@
     @include flex(center, center);
     position: absolute;
     inset: 0;
-    pointer-events: none;
+    // pointer-events: none;
 
     img {
       height: 28px;
@@ -72,6 +72,7 @@
     &_right {
       @include flex(center, center);
       height: 100%;
+      z-index: 9;
     }
 
     &_right {
@@ -91,6 +92,7 @@
     }
 
     &_left {
+
       &_close {
         display: none;
       }
@@ -110,6 +112,7 @@
 
         &.active {
           transform: translateX(0);
+          z-index: 10;
         }
 
         &_item ~ &_item {
@@ -132,6 +135,7 @@
       @include table {
         display: block;
         font-size: 2.5rem;
+        z-index: 9;
       }
     }
   }

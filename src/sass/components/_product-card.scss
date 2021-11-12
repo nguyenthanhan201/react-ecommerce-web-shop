@@ -1,6 +1,9 @@
 .product-card {
+  padding: 10px 0px;
   text-align: center;
   margin-bottom: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 20px;
 
   &_image {
     padding-top: 100%;

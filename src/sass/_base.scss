@@ -13,6 +13,10 @@
 
 html {
   font-size: 13px;
+
+  @include mobile {
+    font-size: 11px;
+  }
 }
 
 body {
@@ -28,11 +32,11 @@ a {
   color: unset;
 }
 
-img{
+img {
   max-width: 100%;
 }
 
-a:hover{
+a:hover {
   color: $main-color;
 }
 
