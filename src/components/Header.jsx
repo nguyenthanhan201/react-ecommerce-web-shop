@@ -51,7 +51,7 @@ const Header = () => {
       <div className='container'>
         <div className='header_logo'>
           <Link to='/'>
-            <img src={logo} alt='' />
+            <img src={logo} alt='logo' />
           </Link>
         </div>
         <div className="header_menu">
