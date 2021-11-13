@@ -43,7 +43,7 @@ const footerCustomerLinks = [
     path: "/about"
   }
 ]
-
+//Code footer add grid component here
 const Footer = () => {
   return (
     <footer className="footer">
