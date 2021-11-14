@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 
 import logo from '../assets/images/Logo-2.png';
@@ -46,6 +46,27 @@ const Header = () => {
 
   const menuToggle = () => menuLeft.current.classList.toggle('active');
 
+  //Dark Mode
+  const [darkTheme, setDarkTheme] = useState(false);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root?.style.setProperty("--main-bg", darkTheme ? "#262833" : "#fff");
+    root?.style.setProperty("--main-color", darkTheme ? "#fff" : "#262833");
+    root?.style.setProperty("--txt-second-color", darkTheme ? "#fff" : "#8d8d8d");
+  }, [darkTheme]);
+
+  const darkToggle = (e) => {
+    e.preventDefault();
+    // const body = document.querySelector('body');
+    // body.classList.toggle('dark');
+    const dark_toggle = document.querySelector('.dark_toggle');
+    dark_toggle.classList.toggle('bx-sun');
+    dark_toggle.classList.toggle('bx-moon');
+  }
+
+
+
   return (
     <div className='header' ref={headerRef}>
       <div className='container'>
@@ -77,6 +98,9 @@ const Header = () => {
             }
           </div>
           <div className="header_menu_right">
+            <div className="header_menu_item header_menu_right_item" onClick={darkToggle}>
+              <i className='dark_toggle bx bx-moon' onClick={() => { setDarkTheme(!darkTheme) }}></i>
+            </div>
             <div className="header_menu_item header_menu_right_item">
               <i className="bx bx-search"></i>
             </div>

@@ -21,11 +21,11 @@ const Home = () => {
   return (
     <Helmet title='Trang chủ'>
       {/* {hero slider} */}
-      <HeroSlider 
-      data={heroSliderData} 
-      control={true} 
-      auto={false} 
-      timeOut={5000}/>
+      <HeroSlider
+        data={heroSliderData}
+        control={true}
+        auto={false}
+        timeOut={1000} />
       {/* {end hero slider} */}
       {/* policy section */}
       <Section>
@@ -37,14 +37,14 @@ const Home = () => {
             gap={20}
           >
             {
-            policy.map((item,index) => <Link key={index} to="/policy">
-            <PolicyCard
-            name={item.name}
-            description={item.description}
-            icon={item.icon}
-          />
-            </Link>)
-          }
+              policy.map((item, index) => <Link key={index} to="/policy">
+                <PolicyCard
+                  name={item.name}
+                  description={item.description}
+                  icon={item.icon}
+                />
+              </Link>)
+            }
           </Grid>
         </SectionBody>
       </Section>
@@ -57,13 +57,13 @@ const Home = () => {
         </SectionTitle>
         <SectionBody>
           <Grid
-          col={4}
-          mdCol={2}
-          smCol={1}
-          gap={20}
+            col={4}
+            mdCol={2}
+            smCol={1}
+            gap={20}
           >
             {
-              productData.getProducts(4).map((item,index) => (
+              productData.getProducts(4).map((item, index) => (
                 <ProductCard
                   key={index}
                   img01={item.image01}
@@ -86,13 +86,13 @@ const Home = () => {
         </SectionTitle>
         <SectionBody>
           <Grid
-          col={4}
-          mdCol={2}
-          smCol={1}
-          gap={20}
+            col={4}
+            mdCol={2}
+            smCol={1}
+            gap={20}
           >
             {
-              productData.getProducts(8).map((item,index) => (
+              productData.getProducts(8).map((item, index) => (
                 <ProductCard
                   key={index}
                   img01={item.image01}
@@ -112,7 +112,7 @@ const Home = () => {
       <Section>
         <SectionBody>
           <Link to="/catalog">
-          <img src={banner} alt="" />
+            <img src={banner} alt="" />
           </Link>
         </SectionBody>
       </Section>
@@ -120,18 +120,18 @@ const Home = () => {
 
       {/* popular product */}
       <Section>
-      <SectionTitle>
+        <SectionTitle>
           phổ biến
         </SectionTitle>
         <SectionBody>
           <Grid
-          col={4}
-          mdCol={2}
-          smCol={1}
-          gap={20}
+            col={4}
+            mdCol={2}
+            smCol={1}
+            gap={20}
           >
             {
-              productData.getProducts(12).map((item,index) => (
+              productData.getProducts(12).map((item, index) => (
                 <ProductCard
                   key={index}
                   img01={item.image01}
