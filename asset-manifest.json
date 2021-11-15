@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/react-ecommerce-web-shop/static/css/main.d3141ad6.chunk.css",
-    "main.js": "/react-ecommerce-web-shop/static/js/main.9b6fdc39.chunk.js",
-    "main.js.map": "/react-ecommerce-web-shop/static/js/main.9b6fdc39.chunk.js.map",
+    "main.css": "/react-ecommerce-web-shop/static/css/main.efdf15c2.chunk.css",
+    "main.js": "/react-ecommerce-web-shop/static/js/main.33ecd745.chunk.js",
+    "main.js.map": "/react-ecommerce-web-shop/static/js/main.33ecd745.chunk.js.map",
     "runtime-main.js": "/react-ecommerce-web-shop/static/js/runtime-main.c1f27e9f.js",
     "runtime-main.js.map": "/react-ecommerce-web-shop/static/js/runtime-main.c1f27e9f.js.map",
-    "static/js/2.560d589f.chunk.js": "/react-ecommerce-web-shop/static/js/2.560d589f.chunk.js",
-    "static/js/2.560d589f.chunk.js.map": "/react-ecommerce-web-shop/static/js/2.560d589f.chunk.js.map",
+    "static/css/2.f4c56af9.chunk.css": "/react-ecommerce-web-shop/static/css/2.f4c56af9.chunk.css",
+    "static/js/2.0c470987.chunk.js": "/react-ecommerce-web-shop/static/js/2.0c470987.chunk.js",
+    "static/js/2.0c470987.chunk.js.map": "/react-ecommerce-web-shop/static/js/2.0c470987.chunk.js.map",
     "index.html": "/react-ecommerce-web-shop/index.html",
-    "static/css/main.d3141ad6.chunk.css.map": "/react-ecommerce-web-shop/static/css/main.d3141ad6.chunk.css.map",
-    "static/js/2.560d589f.chunk.js.LICENSE.txt": "/react-ecommerce-web-shop/static/js/2.560d589f.chunk.js.LICENSE.txt",
+    "static/css/2.f4c56af9.chunk.css.map": "/react-ecommerce-web-shop/static/css/2.f4c56af9.chunk.css.map",
+    "static/css/main.efdf15c2.chunk.css.map": "/react-ecommerce-web-shop/static/css/main.efdf15c2.chunk.css.map",
+    "static/js/2.0c470987.chunk.js.LICENSE.txt": "/react-ecommerce-web-shop/static/js/2.0c470987.chunk.js.LICENSE.txt",
     "static/media/Logo-2.3f227664.png": "/react-ecommerce-web-shop/static/media/Logo-2.3f227664.png",
     "static/media/banner.3c5f3ab8.png": "/react-ecommerce-web-shop/static/media/banner.3c5f3ab8.png",
     "static/media/boxicons.min.css": "/react-ecommerce-web-shop/static/media/boxicons.cbd149c5.ttf",
@@ -43,8 +45,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c1f27e9f.js",
-    "static/js/2.560d589f.chunk.js",
-    "static/css/main.d3141ad6.chunk.css",
-    "static/js/main.9b6fdc39.chunk.js"
+    "static/css/2.f4c56af9.chunk.css",
+    "static/js/2.0c470987.chunk.js",
+    "static/css/main.efdf15c2.chunk.css",
+    "static/js/main.33ecd745.chunk.js"
   ]
 }
