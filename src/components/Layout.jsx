@@ -1,26 +1,33 @@
 import React from 'react'
 
 import { BrowserRouter, Route } from 'react-router-dom'
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
-import Header  from './Header'
+import Header from './Header'
 import Footer from './Footer'
+import SocialSidebar from './SocialSidebar'
 
 import Routes from '../routes/Routes'
 
 const Layout = () => {
   return (
     <BrowserRouter>
-    <Route render={props =>(
-      <div>
-         <Header {...props}/>
-        <div className="container">
-          <div className="main">
-            <Routes/>
+      <Route render={props => (
+        <div>
+          <SocialSidebar />
+          <Header {...props} />
+          <div className="container">
+            <div className="main">
+              <Routes />
+            </div>
           </div>
+          <Footer />
+          <MessengerCustomerChat
+            pageId="112923334536560"
+            appId="607798237303462"
+          />
         </div>
-        <Footer/>
-      </div>
-    )} />
+      )} />
     </BrowserRouter>
   )
 }

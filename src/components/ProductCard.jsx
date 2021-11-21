@@ -8,9 +8,23 @@ import Button from './Button'
 import numberWithCommans from '../utils/numberWithCommans'
 
 const ProductCard = props => {
+  const all_shoesss = document.querySelectorAll('.shoesss');
+  const child_shoes1 = document.querySelectorAll('.child-shoes1');
+  const child_shoes2 = document.querySelectorAll('.child-shoes2');
+
+  child_shoes1.forEach((item, index) => {
+    item.handleClick = (e) => {
+      e.preventDefault();
+      alert('hi');
+    }
+  })
+
+  function changeImageSrc(anything) {
+    // document.querySelector('.shoesss').src = anything;
+  }
   return (
     <div className="product-card">
-      <Link to={`/catalog/${props.slug}`}>
+      {/* <Link to={`/catalog/${props.slug}`}>
         <div className="product-card_image">
           <img src={props.img01} alt="" />
           <img src={props.img02} alt="" />
@@ -31,6 +45,30 @@ const ProductCard = props => {
         >
           chọn mua
         </Button>
+      </div> */}
+      <div className="container-product-card">
+        <ul className="thumb">
+          <li onMouseOver={() => changeImageSrc(props.img01)} className='child-shoes1' ><img src={props.img01} alt="img01" /></li>
+          <li onMouseOver={() => changeImageSrc(props.img02)} className='child-shoes2' ><img src={props.img02} alt="img02" /></li>
+        </ul>
+        <div className="imgBox">
+          <h2>{props.name}</h2>
+          <Link to={`/catalog/${props.slug}`}>
+            <img src={props.img01} alt="img" className="shoesss" />
+          </Link>
+          <ul className="size">
+            <span>Giá</span>
+            <li>{numberWithCommans(props.price)}&#x00111;</li>
+            <li><del>{numberWithCommans(399000)} &#x00111;</del></li>
+          </ul>
+          <Button
+            size="sm"
+            icon="bx bx-cart"
+            animate={true}
+          >
+            chọn mua
+          </Button>
+        </div>
       </div>
     </div>
   )
