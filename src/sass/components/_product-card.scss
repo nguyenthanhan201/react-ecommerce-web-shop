@@ -2,8 +2,6 @@
   padding: 10px 0px;
   text-align: center;
   margin-bottom: 30px;
-  // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  // border-radius: 20px;
 
   &_image {
     padding-top: 100%;
@@ -169,4 +167,16 @@
 .container-product-card .imgBox button {
   position: absolute;
   bottom: -7%;
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded > img {
+  opacity: 1;
+  transition: all .3s;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded > .shoess{
+  width: 80% !important;
+  height: 80% !important;
 }

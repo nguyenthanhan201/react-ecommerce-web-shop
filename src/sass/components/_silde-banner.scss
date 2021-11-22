@@ -8,20 +8,9 @@ $nb-slides: 5;
   width: 100%;
 }
 
-.flex {
-  display: flex;
-}
-
-.center {
-  @extend .flex;
-  align-items: center; // horizontal
-  justify-content: center; // vertical
-}
-
 .carousel-wrapper {
-  @extend .flex;
+  @include flex(center, center);
   position: relative;
-  max-width: 600px;
   margin: 50px;
 
   input {
@@ -36,7 +25,7 @@ $nb-slides: 5;
   border-radius: 15px;
 
   ul {
-    @extend .center;
+    @include flex(center, center);
     position: relative;
     list-style: none;
     overflow: hidden;
@@ -71,7 +60,7 @@ $nb-slides: 5;
   height: $dot-size;
 
   opacity: 0.5;
-  background-color: black;
+  background-color: $main-color;
   border-radius: 50%;
   transition: 0.4s;
 
