@@ -13,7 +13,8 @@ import heroSliderData from '../assets/fake-data/hero-slider'
 import policy from '../assets/fake-data/policy'
 import productData from '../assets/fake-data/products'
 
-import banner from '../assets/images/banner.png'
+// import banner from '../assets/images/banner.png'
+import SlideBanner from '../components/SlideBanner'
 
 
 
@@ -71,6 +72,7 @@ const Home = () => {
                   name={item.title}
                   price={Number(item.price)}
                   slug={item.slug}
+                
                 />
               ))
             }
@@ -111,9 +113,10 @@ const Home = () => {
       {/* banner */}
       <Section>
         <SectionBody>
-          <Link to="/catalog">
-            <img src={banner} alt="" />
-          </Link>
+          {/* <Link to="/catalog"> */}
+            {/* <img src={banner} alt="" /> */}
+            <SlideBanner/>
+          {/* </Link> */}
         </SectionBody>
       </Section>
       {/* end banner */}
