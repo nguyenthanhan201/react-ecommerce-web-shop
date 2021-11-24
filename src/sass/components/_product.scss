@@ -189,3 +189,35 @@
     transform: translateX(-50%);
   }
 }
+
+.img-zoom-container {
+  display: flex;
+  margin-left: 10px;
+  flex-grow: 1;
+  position: relative;
+
+  .img-zoom-lens {
+    position: absolute;
+    /*set the size of the lens:*/
+    width: 40px;
+    height: 40px;
+  }
+
+  .img-zoom-lens:hover ~ #myresult {
+    transform: scale(1);
+  }
+
+  .img-zoom-lens:hover {
+    border: 1px solid black;
+  }
+
+  .img-zoom-result {
+    border: 1px solid black;
+    /*set the size of the result div:*/
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    transform: scale(0);
+    z-index: 99;
+  }
+}

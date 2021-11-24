@@ -10,6 +10,8 @@ Custom Footer: https://codepen.io/tgeorgetom/pen/LYEOLNv
 Hiệu ứng focus cho input: https://www.youtube.com/watch?v=WhKBRWIY01M&t=45s
 CSS Glassmorphism Product Card Slider UI Design: https://www.youtube.com/watch?v=i0HKG2om_C4
 Build a Slider with React.js: https://www.youtube.com/watch?v=og3wCO98HkQ
+Improve react Performance with React Lazy Load Image: https://www.youtube.com/watch?v=0-Ze5dEgVFk&t=503s
+Build a Slider Banner is just css: https://codepen.io/osef/pen/BaRqeLP
 
 Fix node_module:
 rm -rf node_modules 

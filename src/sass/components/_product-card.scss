@@ -139,6 +139,10 @@
 .container-product-card .imgBox .size {
   @include flex(center, center);
   margin-top: 10px;
+
+  @include mobile {
+    margin-top: 5px;
+  }
 }
 
 .container-product-card .imgBox .size span {
@@ -171,12 +175,16 @@
 
 .lazy-load-image-background.blur.lazy-load-image-loaded > img {
   opacity: 1;
-  transition: all .3s;
+  transition: all 0.3s;
   width: 100% !important;
   height: 100% !important;
 }
 
-.lazy-load-image-background.blur.lazy-load-image-loaded > .shoess{
+.lazy-load-image-background.blur.lazy-load-image-loaded > .shoess {
   width: 80% !important;
   height: 80% !important;
+
+  @include mobile {
+    width: 75% !important;
+  }
 }
