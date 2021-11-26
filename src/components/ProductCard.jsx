@@ -9,6 +9,13 @@ import Button from "./Button";
 const ProductCard = (props) => {
   const [sourceURL, setSourceURL] = useState(props.img01);
 
+  function refreshPage() {
+    setTimeout(() => {
+      window.location.reload(false);
+    }, 100);
+    // console.log("page to reload");
+  }
+
   return (
     <div className="product-card">
       <div className="container-product-card">
@@ -40,14 +47,12 @@ const ProductCard = (props) => {
         </ul>
         <div className="imgBox">
           <h2>{props.name}</h2>
-          <Link to={`/catalog/${props.slug}`}>
+          <Link to={`/catalog/${props.slug}`} onClick={refreshPage}>
             <LazyLoadImage
               src={sourceURL}
-              alt="img"
+              alt="imgPreview"
               effect="blur"
               className="shoess"
-              // height="80%"
-              // width="80%"
               delayTime={500}
               placeholderSrc={process.env.PUBLIC_URL + "/logo192.png"}
             />

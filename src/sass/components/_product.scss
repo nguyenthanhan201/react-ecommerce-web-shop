@@ -7,7 +7,7 @@
 
   &_image {
     @include flex(flex-start, flex-start);
-    width: 60%;
+    width: 50%;
     flex-wrap: wrap;
 
     @include table {
@@ -190,11 +190,16 @@
   }
 }
 
+// ? code cho phan image zoom o day
 .img-zoom-container {
   display: flex;
   margin-left: 10px;
   flex-grow: 1;
   position: relative;
+
+  #myimage {
+    height: 600px;
+  }
 
   .img-zoom-lens {
     position: absolute;
@@ -214,9 +219,12 @@
   .img-zoom-result {
     border: 1px solid black;
     /*set the size of the result div:*/
-    width: 350px;
-    height: 400px;
-    position: absolute;
+    // width: 350px;
+    right: 10px;
+    // width: 50%;
+    // height: 400px;
+    height: 80%;
+    position: fixed;
     transform: scale(0);
     z-index: 99;
   }

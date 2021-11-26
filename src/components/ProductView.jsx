@@ -131,18 +131,26 @@ const ProductView = (props) => {
 
   function customRightResult() {
     window.addEventListener("load", () => {
-      var elmnt = document.getElementById("myimage");
-      var elmntResult = document.getElementById("myresult");
-      var cx = Number(elmnt.width + 10);
-      elmntResult.style.left = cx + "px";
-      // console.log(cx);
-    });
-    window.addEventListener("resize", () => {
-      var elmnt = document.getElementById("myimage");
-      var elmntResult = document.getElementById("myresult");
-      var cx = Number(elmnt.width+ 10);
-      elmntResult.style.left = cx + "px";
-      // console.log(cx);
+      var elementResult = document.querySelector("#myresult");
+
+      // ?Lay cac phan tu tinh toan do dai zoom_result
+      var container = Array.from(document.getElementsByClassName("container"));
+      console.log(container[1].clientWidth);
+      var product_image = document.querySelector(".product_image");
+      var num = (product_image.clientWidth * 100) / container[1].clientWidth;
+      console.log("phan tram cua product_image:" + num.toFixed());
+
+      var widthOfResult = 98 - num.toFixed();
+      console.log("phan tram cua result:" + widthOfResult);
+
+      if (typeof elementResult != "undefined") {
+        if (widthOfResult > 51) {
+          widthOfResult = 51;
+          elementResult.style.width = widthOfResult + "%";
+        } else {
+          elementResult.style.width = widthOfResult + "%";
+        }
+      }
     });
   }
 
@@ -186,13 +194,7 @@ const ProductView = (props) => {
             <div id="myresult" class="img-zoom-result"></div>
           </div> */}
           <div className="img-zoom-container">
-            <img
-              id="myimage"
-              src={previewImg}
-              alt=""
-              width="95%"
-              height="550px"
-            />
+            <img id="myimage" src={previewImg} alt="" width="95%" />
             <div id="myresult" className="img-zoom-result"></div>
           </div>
 
