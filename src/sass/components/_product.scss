@@ -119,23 +119,35 @@
 
       &_quantity {
         @include flex(flex-start, flex-start);
+        font-weight: 600 !important;
 
         &_btn {
           @include flex(center, center);
-          width: 30px;
-          height: 30px;
-          border: 2px solid $txt-second-color;
+          width: 40px;
+          height: 40px;
           font-size: 1.5rem;
+          color: $txt-second-color;
           cursor: pointer;
+          border-radius: 10px 0 0 10px;
+          border: 2px solid $txt-second-color;
+          border-right: none;
+        }
+
+        &_btn:nth-child(3) {
+          border-radius: 0 10px 10px 0;
+          border-left: none;
+          border-right: 2px solid $txt-second-color;
         }
 
         &_input {
           @include flex(center, center);
-          height: 30px;
-          width: 90px;
+          height: 40px;
+          width: 60px;
           font-size: 1.5rem;
-          border-top: 2px solid $txt-second-color;
-          border-bottom: 2px solid $txt-second-color;
+          border-left: none;
+          border: 2px solid $txt-second-color;
+          border-right: none;
+          border-left: none;
         }
       }
 
@@ -221,11 +233,12 @@
     /*set the size of the result div:*/
     // width: 350px;
     right: 10px;
-    // width: 50%;
+    width: 51%;
     // height: 400px;
-    height: 80%;
+    height: 60%;
     position: fixed;
     transform: scale(0);
     z-index: 99;
+    top: 20%;
   }
 }

@@ -12,6 +12,8 @@ CSS Glassmorphism Product Card Slider UI Design: https://www.youtube.com/watch?v
 Build a Slider with React.js: https://www.youtube.com/watch?v=og3wCO98HkQ
 Improve react Performance with React Lazy Load Image: https://www.youtube.com/watch?v=0-Ze5dEgVFk&t=503s
 Build a Slider Banner is just css: https://codepen.io/osef/pen/BaRqeLP
+Button Select Quantity: https://codepen.io/tgeorgetom/pen/qyJLjz
+Creative Page Scroll Progress Bar: https://www.youtube.com/watch?v=qYFkQa0Bbq0
 
 Fix node_module:
 rm -rf node_modules 

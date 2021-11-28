@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router";
+//? Import custom alert
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import numberWithCommans from "../utils/numberWithCommans";
@@ -32,9 +33,12 @@ const ProductView = (props) => {
     setQuantity(1);
     setColor(undefined);
     setSize(undefined);
-    imageZoom("myimage", "myresult");
     customRightResult();
   }, [product]);
+
+  useEffect(() => {
+    imageZoom("myimage", "myresult");
+  }, [previewImg]);
 
   const check = () => {
     if (color === undefined) {
@@ -135,13 +139,13 @@ const ProductView = (props) => {
 
       // ?Lay cac phan tu tinh toan do dai zoom_result
       var container = Array.from(document.getElementsByClassName("container"));
-      console.log(container[1].clientWidth);
+      // console.log(container[1].clientWidth);
       var product_image = document.querySelector(".product_image");
       var num = (product_image.clientWidth * 100) / container[1].clientWidth;
-      console.log("phan tram cua product_image:" + num.toFixed());
+      // console.log("phan tram cua product_image:" + num.toFixed());
 
       var widthOfResult = 98 - num.toFixed();
-      console.log("phan tram cua result:" + widthOfResult);
+      // console.log("phan tram cua result:" + widthOfResult);
 
       if (typeof elementResult != "undefined") {
         if (widthOfResult > 51) {
@@ -153,6 +157,10 @@ const ProductView = (props) => {
       }
     });
   }
+
+  window.addEventListener("load", () => {
+    imageZoom("myimage", "myresult");
+  });
 
   return (
     <>
@@ -174,7 +182,6 @@ const ProductView = (props) => {
               className="product_image_list_item"
               onClick={() => {
                 setReviewImg(product.image01);
-                imageZoom("myimage", "myresult");
               }}
             >
               <img src={product.image01} alt="" />
@@ -183,7 +190,6 @@ const ProductView = (props) => {
               className="product_image_list_item"
               onClick={() => {
                 setReviewImg(product.image02);
-                imageZoom("myimage", "myresult");
               }}
             >
               <img src={product.image02} alt="" />
@@ -264,14 +270,14 @@ const ProductView = (props) => {
                 className="product_info_item_quantity_btn"
                 onClick={() => updateQuantity("minus")}
               >
-                <i className="bx bx-minus"></i>
+                {/* <i className="bx bx-minus"></i> */}-
               </div>
               <div className="product_info_item_quantity_input">{quantity}</div>
               <div
                 className="product_info_item_quantity_btn"
                 onClick={() => updateQuantity("plus")}
               >
-                <i className="bx bx-plus"></i>
+                {/* <i className="bx bx-plus"></i> */}+
               </div>
             </div>
           </div>
