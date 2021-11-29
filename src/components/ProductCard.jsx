@@ -2,12 +2,16 @@ import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { set } from "../redux/product-modal/productModalSlice";
 import numberWithCommans from "../utils/numberWithCommans";
 import Button from "./Button";
 
 const ProductCard = (props) => {
   const [sourceURL, setSourceURL] = useState(props.img01);
+
+  const dispatch = useDispatch();
 
   // function refreshPage() {
   //   setTimeout(() => {
@@ -63,7 +67,12 @@ const ProductCard = (props) => {
               <del>{numberWithCommans(399000)} &#x00111;</del>
             </li>
           </ul>
-          <Button size="sm" icon="bx bx-cart" animate={true}>
+          <Button
+            size="sm"
+            icon="bx bx-cart"
+            animate={true}
+            onClick={() => dispatch(set(props.slug))}
+          >
             chọn mua
           </Button>
         </div>

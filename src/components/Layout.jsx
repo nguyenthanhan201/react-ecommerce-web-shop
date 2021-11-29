@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Routes from "../routes/Routes";
 import Footer from "./Footer";
 import Header from "./Header";
+import ProductViewModel from "./ProductViewModel";
 import ScrollTop from "./ScrollTop";
 import SocialSidebar from "./SocialSidebar";
 
@@ -41,6 +42,7 @@ const Layout = () => {
                   </div>
                 </div>
                 <Footer />
+                <ProductViewModel />
                 <MessengerCustomerChat
                   pageId="112923334536560"
                   appId="607798237303462"

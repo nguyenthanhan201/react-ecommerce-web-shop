@@ -1,14 +1,26 @@
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { withRouter } from "react-router";
 //? Import custom alert
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { addItem } from "../redux/shopping-cart/cartItemsSlide";
 import numberWithCommans from "../utils/numberWithCommans";
 import Button from "./Button";
 
 const ProductView = (props) => {
-  const product = props.product;
+  const dispatch = useDispatch();
+
+  let product = props.product;
+
+  if (product === undefined)
+    product = {
+      price: 0,
+      title: "",
+      colors: [],
+      size: [],
+    };
 
   const [previewImg, setReviewImg] = useState(product.image01);
 
@@ -59,7 +71,35 @@ const ProductView = (props) => {
   };
 
   const addToCart = () => {
-    if (check()) console.log({ color, size, quantity });
+    if (check()) {
+      dispatch(
+        addItem({
+          slug: product.slug,
+          color: color,
+          size: size,
+          quantity: quantity,
+          price: product.price,
+        })
+      );
+      toast.success("Thêm giỏ hàng thành công", {
+        position: "top-right",
+      });
+    }
+  };
+
+  const goToCart = () => {
+    if (check()) {
+      dispatch(
+        addItem({
+          slug: product.slug,
+          color: color,
+          size: size,
+          quantity: quantity,
+          price: product.price,
+        })
+      );
+      props.history.push("/cart");
+    }
   };
 
   const gotoCart = () => {
@@ -311,7 +351,7 @@ const ProductView = (props) => {
 };
 
 ProductView.propTypes = {
-  product: PropTypes.object.isRequired,
+  product: PropTypes.object,
 };
 
 export default withRouter(ProductView);
