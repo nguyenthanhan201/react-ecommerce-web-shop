@@ -1,6 +1,6 @@
 .product {
   @include flex(flex-start, flex-start);
-
+// Responsive Footer
   @include mobile {
     flex-direction: column;
   }
