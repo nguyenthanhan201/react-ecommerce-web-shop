@@ -21,7 +21,7 @@ const mainNav = [
     path: '/contact'
   }
 ]
-
+// Tạo bố cục Header
 const Header = () => {
 
   const { pathname } = useLocation()
