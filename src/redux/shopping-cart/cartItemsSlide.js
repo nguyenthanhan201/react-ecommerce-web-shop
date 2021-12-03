@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+// Chức năng tính tổng tiền
 const items =
   localStorage.getItem("cartItems") !== null
     ? JSON.parse(localStorage.getItem("cartItems"))
