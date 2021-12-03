@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import Button from './Button'
 
 import numberWithCommans from '../utils/numberWithCommans'
-
+// Tạo product card component
 const ProductCard = props => {
   return (
     <div className="product-card">
