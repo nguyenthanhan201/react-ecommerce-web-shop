@@ -1,5 +1,5 @@
 import React from 'react'
-// thêm 
+// Tạo Catalog Filter
 const Section = props => {
   return (
     <div className="section">
