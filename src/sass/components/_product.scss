@@ -1,6 +1,6 @@
 .product {
   @include flex(flex-start, flex-start);
-// Responsive 
+// Responsive Catalogpage
   @include mobile {
     flex-direction: column;
   }
