@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+// Tạo policy card component
 const PolicyCard = props => {
   return (
     <div className="policy-card">
