@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Grid from './Grid';
 
 import logo from '../assets/images/Logo-2.png'
-
+// Thêm CSS và tạo bố cục Footer 
 const footerAboutLinks = [
   {
     display: "Giới Thiệu",
