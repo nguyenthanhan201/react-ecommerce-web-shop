@@ -6,7 +6,7 @@ import Home from "../pages/Home";
 import Catalog from "../pages/Catalog";
 import Cart from "../pages/Cart";
 import Product from "../pages/Product";
-
+// them
 const Routes = () => {
   return (
     <Switch>
