@@ -1,5 +1,5 @@
 import React from 'react'
-
+// Tạo Setion component
 const Section = props => {
   return (
     <div className="section">
