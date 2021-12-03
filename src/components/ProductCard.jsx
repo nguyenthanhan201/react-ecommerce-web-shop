@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import Button from './Button'
 
 import numberWithCommans from '../utils/numberWithCommans'
-//add
+//Tạo tự động thêm danh sách sản phẩm
 const ProductCard = props => {
   return (
     <div className="product-card">
