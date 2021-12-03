@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+// Tạo checkbox component
 const CheckBox = (props) => {
   const inputRef = React.useRef(null);
 
