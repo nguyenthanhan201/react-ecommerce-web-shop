@@ -5,6 +5,7 @@ import { withRouter } from "react-router";
 //? Import custom alert
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ColorPickerItem } from "react-windows-ui";
 import { addItem } from "../redux/shopping-cart/cartItemsSlide";
 import numberWithCommans from "../utils/numberWithCommans";
 import Button from "./Button";
@@ -87,7 +88,7 @@ const ProductView = (props) => {
     }
   };
 
-  const goToCart = () => {
+  const gotoCart = () => {
     if (check()) {
       dispatch(
         addItem({
@@ -100,10 +101,6 @@ const ProductView = (props) => {
       );
       props.history.push("/cart");
     }
-  };
-
-  const gotoCart = () => {
-    if (check()) props.history.push("/cart");
   };
 
   function imageZoom(imgID, resultID) {
@@ -273,6 +270,12 @@ const ProductView = (props) => {
           </div>
           <div className="product_info_item">
             <div className="product_info_item_title">Màu sắc</div>
+            {/* <ColorPickerItem
+              defaultChecked
+              name="12"
+              color="#0078D7"
+              onChange={() => {}}
+            /> */}
             <div className="product_info_item_list">
               {product.colors.map((item, index) => (
                 <div
