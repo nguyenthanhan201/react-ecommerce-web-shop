@@ -1,13 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
+import React from "react";
+import { Link } from "react-router-dom";
+import numberWithCommans from "../utils/numberWithCommans";
+import Button from "./Button";
 
-import { Link } from 'react-router-dom'
-
-import Button from './Button'
-
-import numberWithCommans from '../utils/numberWithCommans'
-
-const ProductCard = props => {
+const ProductCard = (props) => {
   return (
     <div className="product-card">
       <Link to={`/catalog/${props.slug}`}>
@@ -24,17 +21,13 @@ const ProductCard = props => {
         </div>
       </Link>
       <div className="product-card_btn">
-        <Button
-          size="sm"
-          icon="bx bx-cart"
-          animate={true}
-        >
+        <Button size="sm" icon="bx bx-cart" animate={true}>
           chọn mua
         </Button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 ProductCard.propTypes = {
   img01: PropTypes.string.isRequired,
@@ -42,6 +35,6 @@ ProductCard.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   slug: PropTypes.string.isRequired,
-}
+};
 
-export default ProductCard
+export default ProductCard;

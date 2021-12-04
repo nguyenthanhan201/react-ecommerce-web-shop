@@ -1,13 +1,11 @@
-import React, { useCallback, useState, useEffect, useRef } from "react";
-
-import Helmet from "../components/Helmet";
-import CheckBox from "../components/CheckBox";
-import Button from "../components/Button";
-
-import productData from "../assets/fake-data/products";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import category from "../assets/fake-data/category";
 import colors from "../assets/fake-data/product-color";
 import size from "../assets/fake-data/product-size";
+import productData from "../assets/fake-data/products";
+import Button from "../components/Button";
+import CheckBox from "../components/CheckBox";
+import Helmet from "../components/Helmet";
 import InfinityList from "../components/InfinityList";
 
 const Catalog = () => {

@@ -1,11 +1,10 @@
 import React from "react";
 import productData from "../assets/fake-data/products";
-
-import Helmet from "../components/Helmet";
-import Section, { SectionBody, SectionTitle } from "../components/Section";
 import Grid from "../components/Grid";
+import Helmet from "../components/Helmet";
 import ProductCard from "../components/ProductCard";
 import ProductView from "../components/ProductView";
+import Section, { SectionBody, SectionTitle } from "../components/Section";
 
 const Product = (props) => {
   const product = productData.getProductBySlug(props.match.params.slug);
