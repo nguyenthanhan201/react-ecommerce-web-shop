@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import Grid from "./Grid";
 import ProductCard from "./ProductCard";
-
+// Tạo tự động thêm danh sách sản phẩm
 const InfinityList = (props) => {
   const perLoad = 6;
   const listRef = useRef(null);
