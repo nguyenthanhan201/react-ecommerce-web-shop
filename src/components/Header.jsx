@@ -110,7 +110,9 @@ const Header = () => {
               </Link>
             </div>
             <div className="header_menu_item header_menu_right_item">
-              <i className="bx bx-user"></i>
+            <Link to='/login'>
+                <i className="bx bx-user"></i>
+            </Link>
             </div>
           </div>
         </div>
