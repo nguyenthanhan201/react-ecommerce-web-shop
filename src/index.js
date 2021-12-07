@@ -1,15 +1,18 @@
-// https://www.youtube.com/watch?v=I8GRy7GA3lU&t=181s
-// 53
+// https://www.youtube.com/watch?v=NVssb8XHsKU&t=142s
+// 28.03
 import React from "react";
 import ReactDOM from "react-dom";
-
+import { Provider } from "react-redux";
 import "./assets/boxicons-2.0.7/css/boxicons.min.css";
 import Layout from "./components/Layout";
+import { store } from "./redux/store";
 import "./sass/index.scss";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Layout />
+    <Provider store={store}>
+      <Layout />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

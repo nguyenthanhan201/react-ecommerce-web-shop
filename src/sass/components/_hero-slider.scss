@@ -6,6 +6,7 @@
   margin-bottom: 50px;
   // margin-top: calc(#{$header-height} * -1);
   margin-top: -90px;
+  background-color: var(--main-bg);
 
   @include table {
     margin-top: calc(#{$header-tablet-height} * -1);

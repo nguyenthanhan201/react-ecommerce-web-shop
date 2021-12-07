@@ -1,5 +1,5 @@
 .header {
-  background-color: $main-bg;
+  background-color: var(--main-bg);
   position: fixed;
   top: 0;
   left: 0;
@@ -92,14 +92,13 @@
     }
 
     &_left {
-
       &_close {
         display: none;
       }
 
       @include table {
         flex-direction: column;
-        background: $main-bg;
+        background: var(--main-bg);
         position: absolute;
         left: 0;
         top: 0;
@@ -118,6 +117,10 @@
         &_item ~ &_item {
           margin-left: unset;
           margin-top: 20px;
+        }
+
+        &_item {
+          color: var(--main-color);
         }
 
         &_close {

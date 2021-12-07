@@ -1,40 +1,85 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
+import React, { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { set } from "../redux/product-modal/productModalSlice";
+import numberWithCommans from "../utils/numberWithCommans";
+import Button from "./Button";
 
-import { Link } from 'react-router-dom'
+const ProductCard = (props) => {
+  const [sourceURL, setSourceURL] = useState(props.img01);
 
-import Button from './Button'
+  const dispatch = useDispatch();
 
-import numberWithCommans from '../utils/numberWithCommans'
+  // function refreshPage() {
+  //   setTimeout(() => {
+  //     window.location.reload(false);
+  //   }, 0);
+  // }
 
-const ProductCard = props => {
   return (
     <div className="product-card">
-      <Link to={`/catalog/${props.slug}`}>
-        <div className="product-card_image">
-          <img src={props.img01} alt="" />
-          <img src={props.img02} alt="" />
+      <div className="container-product-card">
+        <ul className="thumb">
+          <li className="child-shoes">
+            <LazyLoadImage
+              src={props.img01}
+              alt="img01"
+              onClick={() => setSourceURL(props.img01)}
+              effect="blur"
+              height="80%"
+              width="80%"
+              delayTime={500}
+              placeholderSrc={process.env.PUBLIC_URL + "/logo192.png"}
+            />
+          </li>
+          <li className="child-shoes">
+            <LazyLoadImage
+              src={props.img02}
+              alt="img02"
+              onClick={() => setSourceURL(props.img02)}
+              effect="blur"
+              height="80%"
+              width="80%"
+              delayTime={500}
+              placeholderSrc={process.env.PUBLIC_URL + "/logo192.png"}
+            />
+          </li>
+        </ul>
+        <div className="imgBox">
+          <h2>{props.name}</h2>
+          <Link to={`/catalog/${props.slug}`}>
+            <LazyLoadImage
+              src={sourceURL}
+              alt="imgPreview"
+              effect="blur"
+              className="shoess"
+              delayTime={500}
+              placeholderSrc={process.env.PUBLIC_URL + "/logo192.png"}
+            />
+          </Link>
+          <ul className="size">
+            <span>Giá</span>
+            <li>{numberWithCommans(props.price)}&#x00111;</li>
+            <li>
+              <del>{numberWithCommans(399000)} &#x00111;</del>
+            </li>
+          </ul>
+          <Button
+            size="sm"
+            icon="bx bx-cart"
+            animate={true}
+            onClick={() => dispatch(set(props.slug))}
+          >
+            chọn mua
+          </Button>
         </div>
-        <h3 className="product-card_name">{props.name}</h3>
-        <div className="product-card_price">
-          {numberWithCommans(props.price)} &#x00111;
-          <span className="product-card_price_old">
-            <del>{numberWithCommans(399000)} &#x00111;</del>
-          </span>
-        </div>
-      </Link>
-      <div className="product-card_btn">
-        <Button
-          size="sm"
-          icon="bx bx-cart"
-          animate={true}
-        >
-          chọn mua
-        </Button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 ProductCard.propTypes = {
   img01: PropTypes.string.isRequired,
@@ -42,6 +87,6 @@ ProductCard.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   slug: PropTypes.string.isRequired,
-}
+};
 
-export default ProductCard
+export default ProductCard;
