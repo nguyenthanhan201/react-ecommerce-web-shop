@@ -31,7 +31,7 @@ function login() {
         <div className="main">
           <div className="main-w3l">
             <h1 className="logo-w3">Space Login Form</h1>
-            <div className="w3layouts-main">
+            <div className="Huynh-main">
               <h2><span>Login now</span></h2>
               <div className="social">
                 <a href="#">Login With Facebook</a>
