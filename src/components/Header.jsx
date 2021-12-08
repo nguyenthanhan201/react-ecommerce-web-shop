@@ -74,6 +74,7 @@ const Header = () => {
   }
 
   //? Search Form
+  // Them chuc nang search form
   const toggleFormSearch = () => {
     document.querySelector(".wrapper-form-search").classList.toggle("active");
   };
@@ -123,6 +124,7 @@ const Header = () => {
                 ></i>
               </div>
               <div className="header_menu_item header_menu_right_item">
+                {/* goi chuc nang search form */}
                 <i className="bx bx-search" onClick={toggleFormSearch}></i>
               </div>
               <div className="header_menu_item header_menu_right_item">
