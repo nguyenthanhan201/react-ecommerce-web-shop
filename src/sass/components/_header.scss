@@ -80,6 +80,7 @@
 
       &_item {
         @include flex(center, center);
+        cursor: pointer;
 
         @include table {
           margin-left: 10px;

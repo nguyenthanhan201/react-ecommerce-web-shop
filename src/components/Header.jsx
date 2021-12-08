@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/images/Logo-2.png";
+import PostFiltersForm from "./PostFiltersForm";
 
 const mainNav = [
   {
@@ -67,63 +68,76 @@ const Header = () => {
     dark_toggle.classList.toggle("bx-moon");
   };
 
+  //? Post Filters Form
+  function handleFiltersChange(newFilters) {
+    console.log(newFilters);
+  }
+
+  //? Search Form
+  const toggleFormSearch = () => {
+    document.querySelector(".wrapper-form-search").classList.toggle("active");
+  };
+
   return (
-    <div className="header" ref={headerRef}>
-      <div className="container">
-        <div className="header_logo">
-          <Link to="/">
-            <img src={logo} alt="" />
-          </Link>
-        </div>
-        <div className="header_menu">
-          <div className="header_menu_mobile-toggle" onClick={menuToggle}>
-            <i className="bx bx-menu-alt-left"></i>
+    <>
+      <PostFiltersForm onSubmit={handleFiltersChange} />
+      <div className="header" ref={headerRef}>
+        <div className="container">
+          <div className="header_logo">
+            <Link to="/">
+              <img src={logo} alt="" />
+            </Link>
           </div>
-          <div className="header_menu_left" ref={menuLeft}>
-            <div className="header_menu_left_close" onClick={menuToggle}>
-              <i className="bx bx-chevron-left"></i>
+          <div className="header_menu">
+            <div className="header_menu_mobile-toggle" onClick={menuToggle}>
+              <i className="bx bx-menu-alt-left"></i>
             </div>
-            {mainNav.map((item, index) => (
+            <div className="header_menu_left" ref={menuLeft}>
+              <div className="header_menu_left_close" onClick={menuToggle}>
+                <i className="bx bx-chevron-left"></i>
+              </div>
+              {mainNav.map((item, index) => (
+                <div
+                  key={index}
+                  className={`header_menu_item header_menu_left_item ${
+                    index === activeNav ? "active" : ""
+                  }`}
+                  onClick={menuToggle}
+                >
+                  <Link to={item.path}>
+                    <span>{item.display}</span>
+                  </Link>
+                </div>
+              ))}
+            </div>
+            <div className="header_menu_right">
               <div
-                key={index}
-                className={`header_menu_item header_menu_left_item ${
-                  index === activeNav ? "active" : ""
-                }`}
-                onClick={menuToggle}
+                className="header_menu_item header_menu_right_item"
+                onClick={darkToggle}
               >
-                <Link to={item.path}>
-                  <span>{item.display}</span>
+                <i
+                  className="dark_toggle bx bx-moon"
+                  onClick={() => {
+                    setDarkTheme(!darkTheme);
+                  }}
+                ></i>
+              </div>
+              <div className="header_menu_item header_menu_right_item">
+                <i className="bx bx-search" onClick={toggleFormSearch}></i>
+              </div>
+              <div className="header_menu_item header_menu_right_item">
+                <Link to="/cart">
+                  <i className="bx bx-shopping-bag"></i>
                 </Link>
               </div>
-            ))}
-          </div>
-          <div className="header_menu_right">
-            <div
-              className="header_menu_item header_menu_right_item"
-              onClick={darkToggle}
-            >
-              <i
-                className="dark_toggle bx bx-moon"
-                onClick={() => {
-                  setDarkTheme(!darkTheme);
-                }}
-              ></i>
-            </div>
-            <div className="header_menu_item header_menu_right_item">
-              <i className="bx bx-search"></i>
-            </div>
-            <div className="header_menu_item header_menu_right_item">
-              <Link to="/cart">
-                <i className="bx bx-shopping-bag"></i>
-              </Link>
-            </div>
-            <div className="header_menu_item header_menu_right_item">
-              <i className="bx bx-user"></i>
+              <div className="header_menu_item header_menu_right_item">
+                <i className="bx bx-user"></i>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
