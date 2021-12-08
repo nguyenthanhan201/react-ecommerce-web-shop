@@ -1,7 +1,6 @@
 body{
 	font-family: 'Montserrat', sans-serif;
 	margin:0;
-	// background: url(https://images.unsplash.com/photo-1529539795054-3c162aab037a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG9naW58ZW58MHx8MHx8&w=1000&q=80) no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -9,6 +8,10 @@ body{
     -ms-background-size: cover;
     background-attachment: fixed;
 	background-position: center;
+}
+.containerlogin1{
+	background: url(https://94now.com/media/amasty/blog/background-dep-cho-website.jpg) no-repeat  ;
+
 }
 body a{
 	transition: 0.5s all;
@@ -90,10 +93,10 @@ input[type="text"], input[type="email"], input[type="password"] {
 	-o-border-radius: 5px;
 }
 // input[type="email"] {
-//     background:  rgba(0, 0, 0, 0.55) url(../images/user.png) no-repeat 10px 10px;
+//     background:  rgba(0, 0, 0, 0.55) url(https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png) no-repeat 10px 10px;
 // }
 // input[type="password"] {
-//     background:  rgba(0, 0, 0, 0.55) url(../images/lock.png) no-repeat 10px 10px;
+//     background:  rgba(0, 0, 0, 0.55) url(https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg) no-repeat 0px 10px ;
 // }
 .Huynh-main h6 {
     font-size: 16px;
