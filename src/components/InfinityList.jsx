@@ -53,9 +53,9 @@ const InfinityList = (props) => {
   return (
     <div ref={listRef}>
       <Grid col={3} mdCol={2} smCol={1} gap={20}>
-        {data.map((item) => (
+        {data.map((item, index) => (
           <ProductCard
-            key={item.slug}
+            key={index}
             img01={item.image01}
             img02={item.image02}
             name={item.title}
