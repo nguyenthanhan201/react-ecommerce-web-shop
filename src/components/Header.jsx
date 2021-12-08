@@ -49,6 +49,7 @@ const Header = () => {
   const menuToggle = () => menuLeft.current.classList.toggle("active");
 
   //? Dark Mode
+  // Dong 53 den 70 code chuc nang cho dark mode
   const [darkTheme, setDarkTheme] = useState(false);
 
   useEffect(() => {
@@ -111,6 +112,7 @@ const Header = () => {
               ))}
             </div>
             <div className="header_menu_right">
+              {/* dong 115 den 126 add chuc nang dark mode */}
               <div
                 className="header_menu_item header_menu_right_item"
                 onClick={darkToggle}
