@@ -26,9 +26,9 @@ const Product = (props) => {
         <SectionTitle>Khám phá thêm</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {relatedProducts.map((item) => (
+            {relatedProducts.map((item, index) => (
               <ProductCard
-                key={item.title}
+                key={index}
                 img01={item.image01}
                 img02={item.image02}
                 name={item.title}
