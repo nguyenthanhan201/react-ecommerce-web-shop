@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import productData from "../assets/fake-data/products";
+import accessoriesData from "../assets/fake-data/accessories";
 
 const PostFiltersForm = (props) => {
   const { onSubmit } = props;
@@ -27,6 +28,15 @@ const PostFiltersForm = (props) => {
   };
 
   let dataSearch = productData.data.cardData.filter((item) => {
+    return Object.keys(item).some((key) =>
+      item[key]
+        .toString()
+        .toLowerCase()
+        .includes(searchTerm.toString().toLowerCase())
+    );
+  });
+
+  let dataSearch2 = accessoriesData.data.cardData.filter((item) => {
     return Object.keys(item).some((key) =>
       item[key]
         .toString()
@@ -62,7 +72,23 @@ const PostFiltersForm = (props) => {
                 alt="hoa"
               />
               <Link to={`/catalog/${item.slug}`}>
-                <p style={{ fontSize: "20px" }}>{item.title}</p>
+                <p style={{ fontSize: "20px" }} onClick={toggleFormSearch}>
+                  {item.title}
+                </p>
+              </Link>
+            </div>
+          ))}
+          {dataSearch2.map((item) => (
+            <div className="form-search_result_line" key={item.title}>
+              <img
+                className="form-search_result_line_image"
+                src={item.image01}
+                alt="hoa"
+              />
+              <Link to={`/catalog/${item.slug}`}>
+                <p style={{ fontSize: "20px" }} onClick={toggleFormSearch}>
+                  {item.title}
+                </p>
               </Link>
             </div>
           ))}
