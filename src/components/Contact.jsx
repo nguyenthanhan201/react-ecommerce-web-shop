@@ -25,15 +25,15 @@ const Contact = () => {
               <h1>Get In Touch</h1>
               <form action>
                 <div className="flex-rev">
-                  <input type="text" placeholder="Connor Gaunt" name="name" id="name" />
+                  <input type="text" placeholder="Full name" name="name" id="name" />
                   <label htmlFor="name">Full Name</label>
                 </div>
                 <div className="flex-rev">
-                  <input type="email" placeholder="connor@connorgaunt.com" name="email" id="email" />
+                  <input type="email" placeholder="Your email" name="email" id="email" />
                   <label htmlFor="email">Your Email</label>
                 </div>
                 <div className="flex-rev">
-                  <textarea placeholder="I have an idea for a project...." name="message" id="message" defaultValue={""} />
+                  <textarea placeholder="Email Message" name="message" id="message" defaultValue={""} />
                   <label htmlFor="message">Email Message</label>
                 </div>
                 <button>Send Email</button>
