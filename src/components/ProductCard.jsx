@@ -13,12 +13,6 @@ const ProductCard = (props) => {
 
   const dispatch = useDispatch();
 
-  // function refreshPage() {
-  //   setTimeout(() => {
-  //     window.location.reload(false);
-  //   }, 0);
-  // }
-
   return (
     <div className="product-card">
       <div className="container-product-card">

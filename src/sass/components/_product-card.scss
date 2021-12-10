@@ -183,6 +183,7 @@
 .lazy-load-image-background.blur.lazy-load-image-loaded > .shoess {
   width: 80% !important;
   height: 80% !important;
+  max-width: 235px;
 
   @include mobile {
     width: 75% !important;

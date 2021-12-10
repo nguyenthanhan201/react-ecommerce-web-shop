@@ -1,15 +1,17 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
 import PropTypes from "prop-types";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import accessoriesData from "../assets/fake-data/products";
 import productData from "../assets/fake-data/products";
-import accessoriesData from "../assets/fake-data/accessories";
 
 const PostFiltersForm = (props) => {
   const { onSubmit } = props;
   const [searchTerm, setSearchTerm] = useState("");
   const typingTimeoutRef = useRef(null);
 
-  // ?Set searchTerm tinh lan cuoi go 300
+  //? Set searchTerm tinh lan cuoi go 300
   const handleSearchTermChange = (e) => {
     const value = e.target.value;
     setSearchTerm(value);
@@ -27,6 +29,7 @@ const PostFiltersForm = (props) => {
     }, 300);
   };
 
+  //? Product normal
   let dataSearch = productData.data.cardData.filter((item) => {
     return Object.keys(item).some((key) =>
       item[key]
@@ -36,7 +39,8 @@ const PostFiltersForm = (props) => {
     );
   });
 
-  let dataSearch2 = accessoriesData.data.cardData.filter((item) => {
+  //? Products accessories
+  let dataSearch2 = accessoriesData.data2.cardData2.filter((item) => {
     return Object.keys(item).some((key) =>
       item[key]
         .toString()
@@ -48,6 +52,11 @@ const PostFiltersForm = (props) => {
   const toggleFormSearch = () => {
     document.querySelector(".wrapper-form-search").classList.toggle("active");
   };
+
+  //? Effect scroll
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   return (
     <div className="wrapper-form-search">
@@ -65,7 +74,10 @@ const PostFiltersForm = (props) => {
         </div>
         <div className="form-search_result">
           {dataSearch.map((item) => (
-            <div className="form-search_result_line" key={item.title}>
+            <div
+              className="form-search_result_line"
+              key={item.slug}
+            >
               <img
                 className="form-search_result_line_image"
                 src={item.image01}
@@ -79,7 +91,7 @@ const PostFiltersForm = (props) => {
             </div>
           ))}
           {dataSearch2.map((item) => (
-            <div className="form-search_result_line" key={item.title}>
+            <div className="form-search_result_line" key={item.slug}>
               <img
                 className="form-search_result_line_image"
                 src={item.image01}
