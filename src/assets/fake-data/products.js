@@ -429,7 +429,7 @@ const data2 = {
     },
     {
       title:
-        "Đồng Hồ Thông Minh Fossil Unisex FTW6024 Dây cao su Caoutchouc cao cấp 43mm",
+        "Đồng Hồ Thông Minh Fossil Unisex FTW6024 Dây cao su Caoutchouc cao cấp 40mm",
       price: "3715000",
       image01: accessories_08_image_01,
       image02: accessories_08_image_02,
@@ -799,7 +799,7 @@ const products2 = [
   },
   {
     title:
-      "Đồng Hồ Thông Minh Fossil Unisex FTW6024 Dây cao su Caoutchouc cao cấp 43mm",
+      "Đồng Hồ Thông Minh Fossil Unisex FTW6024 Dây cao su Caoutchouc cao cấp 40mm",
     price: "3715000",
     image01: accessories_08_image_01,
     image02: accessories_08_image_02,

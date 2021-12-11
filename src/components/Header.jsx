@@ -1,5 +1,5 @@
-import Aos from "aos";
-import "aos/dist/aos.css";
+// import Aos from "aos";
+// import "aos/dist/aos.css";
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/images/Logo-2.png";
@@ -75,12 +75,8 @@ const Header = () => {
   //? Search
   const toggleFormSearch = () => {
     document.querySelector(".wrapper-form-search").classList.toggle("active");
+    document.body.classList.toggle("modal-open");
   };
-
-  //? Effect scroll
-  useEffect(() => {
-    Aos.init();
-  }, []);
 
   return (
     <>

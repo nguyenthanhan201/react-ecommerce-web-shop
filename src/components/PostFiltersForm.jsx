@@ -1,10 +1,13 @@
-import Aos from "aos";
-import "aos/dist/aos.css";
 import PropTypes from "prop-types";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
-import accessoriesData from "../assets/fake-data/products";
-import productData from "../assets/fake-data/products";
+import {
+  default as accessoriesData,
+  default as productData,
+} from "../assets/fake-data/products";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const PostFiltersForm = (props) => {
   const { onSubmit } = props;
@@ -51,11 +54,12 @@ const PostFiltersForm = (props) => {
 
   const toggleFormSearch = () => {
     document.querySelector(".wrapper-form-search").classList.toggle("active");
+    document.body.classList.toggle("modal-open");
   };
 
-  //? Effect scroll
+  const mixArray = [...dataSearch, ...dataSearch2];
   useEffect(() => {
-    Aos.init();
+    AOS.init();
   }, []);
 
   return (
@@ -73,37 +77,31 @@ const PostFiltersForm = (props) => {
           ></input>
         </div>
         <div className="form-search_result">
-          {dataSearch.map((item) => (
-            <div
-              className="form-search_result_line"
-              key={item.slug}
-            >
-              <img
-                className="form-search_result_line_image"
-                src={item.image01}
-                alt="hoa"
-              />
-              <Link to={`/catalog/${item.slug}`}>
-                <p style={{ fontSize: "20px" }} onClick={toggleFormSearch}>
-                  {item.title}
-                </p>
-              </Link>
-            </div>
-          ))}
-          {dataSearch2.map((item) => (
-            <div className="form-search_result_line" key={item.slug}>
-              <img
-                className="form-search_result_line_image"
-                src={item.image01}
-                alt="hoa"
-              />
-              <Link to={`/catalog/${item.slug}`}>
-                <p style={{ fontSize: "20px" }} onClick={toggleFormSearch}>
-                  {item.title}
-                </p>
-              </Link>
-            </div>
-          ))}
+          {/* 
+          ?Check mixArray empty 
+          */}
+          {mixArray.length ? (
+            mixArray.map((item) => (
+              <div>
+                <div className="form-search_result_line" key={item.slug}>
+                <LazyLoadImage
+                  className="form-search_result_line_image"
+                  src={item.image01}
+                  alt="hoa"
+                />
+                <Link to={`/catalog/${item.slug}`}>
+                  <p style={{ fontSize: "20px" }} onClick={toggleFormSearch}>
+                    {item.title}
+                  </p>
+                </Link>
+              </div>
+              </div>
+            ))
+          ) : (
+            <h1 className="search-none">
+              Không tìm thấy kết quả : "{searchTerm}"
+            </h1>
+          )}
         </div>
       </form>
     </div>

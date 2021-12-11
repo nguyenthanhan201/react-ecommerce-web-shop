@@ -18,7 +18,11 @@
   width: 500px;
   position: relative;
 
-  &_icon{
+  @include mobile {
+    width: 90%;
+  }
+
+  &_icon {
     position: absolute;
     color: $btn-main-color;
     right: 0;
@@ -35,15 +39,39 @@
 
     &_line {
       @include flex(center, flex-start);
-      border-bottom: 1px solid blanchedalmond;
       padding: 10px;
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0, 0.5);
       color: $btn-main-color;
+      position: relative;
 
       &_image {
         height: 75px;
         margin-right: 20px;
       }
+    }
+
+    &_line::after{
+      content: "";
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      z-index: 999;
+      height: 2px;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      background-position: 0% 0%;
+      background: linear-gradient(
+        to right,
+        #b294ff,
+        #57e6e6,
+        #feffb8,
+        #57e6e6,
+        #b294ff,
+        #57e6e6
+      );
+      background-size: 500% auto;
+      animation: gradient 3s linear infinite;
     }
   }
 }
@@ -56,7 +84,7 @@
   margin: 0 auto;
   border-radius: 2px;
   padding: 0px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.5);
 }
 .input-box:after {
   content: "";
@@ -116,4 +144,8 @@
   100% {
     color: #7e0fff;
   }
+}
+.search-none {
+  color: $btn-main-color;
+  text-align: center;
 }
