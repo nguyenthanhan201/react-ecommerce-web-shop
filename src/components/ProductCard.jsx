@@ -45,14 +45,13 @@ const ProductCard = (props) => {
         <div className="imgBox">
           <h2>{props.name}</h2>
           <Link to={`/catalog/${props.slug}`}>
-            <LazyLoadImage
-              src={sourceURL}
-              alt="imgPreview"
-              effect="blur"
-              className="shoess"
-              delayTime={500}
-              placeholderSrc={process.env.PUBLIC_URL + "/logo192.png"}
-            />
+              <LazyLoadImage
+            src={sourceURL}
+            alt="imgPreview"
+            effect="blur"
+            className="shoess"
+            delayTime={500}
+            placeholderSrc={process.env.PUBLIC_URL + "/logo192.png"}/>
           </Link>
           <ul className="size">
             <span>Giá</span>
@@ -81,6 +80,7 @@ ProductCard.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   slug: PropTypes.string.isRequired,
+  img01_webp: PropTypes.string,
 };
 
 export default ProductCard;
