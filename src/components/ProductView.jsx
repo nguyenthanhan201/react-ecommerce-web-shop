@@ -87,20 +87,20 @@ const ProductView = (props) => {
     }
   };
 
-  const goToCart = () => {
-    if (check()) {
-      dispatch(
-        addItem({
-          slug: product.slug,
-          color: color,
-          size: size,
-          quantity: quantity,
-          price: product.price,
-        })
-      );
-      props.history.push("/cart");
-    }
-  };
+  // const goToCart = () => {
+  //   if (check()) {
+  //     dispatch(
+  //       addItem({
+  //         slug: product.slug,
+  //         color: color,
+  //         size: size,
+  //         quantity: quantity,
+  //         price: product.price,
+  //       })
+  //     );
+  //     props.history.push("/cart");
+  //   }
+  // };
 
   const gotoCart = () => {
     if (check()) props.history.push("/cart");

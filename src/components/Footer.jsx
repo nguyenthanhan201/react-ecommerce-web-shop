@@ -121,11 +121,13 @@ const Footer = () => {
               <div className="f_widget company_widget wow fadeInLeft">
                 <h3 className="f-title f_600 t_color f_size_18">Nhận cập nhập</h3>
                 <p>Không bỏ lỡ những sản phẩm mới của chúng tôi</p>
-                <form action="#" className="form-field" method="post" noValidate={true} _lpchecked="1">
+                {/* <form action="#" className="form-field" method="post" noValidate={true} _lpchecked="1">
                   <input type="text" className="form-field_input" placeholder=" " />
                   <label htmlFor="name" className="form-field_label">Email</label>
-                </form>
+                </form> */}
+                <Link to='/register'>
                 <Button>Đăng kí</Button>
+                </Link>
               </div>
             </div>
             <div>

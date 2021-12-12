@@ -16,7 +16,7 @@ const policy = [
     },
     {
         name: "Hỗ trợ bảo hành",
-        description: "Đổi, sửa đồ tại tất cả store",
+        description: "Đổi, sửa đồ tại tất cả store trên toàn quốc",
         icon: "bx bx-donate-heart"
     }
 ]

@@ -27,6 +27,10 @@
     transform: translateY(-250px);
     transition: transform 0.3s ease;
 
+    @include table {
+      width: 90%;
+    }
+
     &_close {
       position: absolute;
       right: 0;
@@ -37,12 +41,12 @@
       border-radius: 0;
     }
 
-    .img-zoom-container{
+    .img-zoom-container {
       pointer-events: none;
     }
   }
 
-  &.active &_content{
+  &.active &_content {
     opacity: 1;
     transform: translateY(0);
   }

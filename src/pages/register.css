@@ -1,0 +1,483 @@
+/*--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+
+/*--- reset code ---*/
+.register-page html,.register-page body,.register-page div,.register-page span,.register-page applet,.register-page object,.register-page iframe,.register-page h1,.register-page h2,.register-page h3,.register-page h4,.register-page h5,.register-page h6,.register-page p,.register-page blockquote,.register-page pre,.register-page a,.register-page abbr,.register-page acronym,.register-page address,.register-page big,.register-page cite,.register-page code,.register-page del,.register-page dfn,.register-page em,.register-page img,.register-page ins,.register-page kbd,.register-page q,.register-page s,.register-page samp,.register-page small,.register-page strike,.register-page strong,.register-page sub,.register-page sup,.register-page tt,.register-page var,.register-page b,.register-page u,.register-page i,.register-page dl,.register-page dt,.register-page dd,.register-page ol,.register-page nav ul,.register-page nav li,.register-page fieldset,.register-page form,.register-page label,.register-page legend,.register-page table,.register-page caption,.register-page tbody,.register-page tfoot,.register-page thead,.register-page tr,.register-page th,.register-page td,.register-page article,.register-page aside,.register-page canvas,.register-page details,.register-page embed,.register-page figure,.register-page figcaption,.register-page footer,.register-page header,.register-page hgroup,.register-page menu,.register-page nav,.register-page output,.register-page ruby,.register-page section,.register-page summary,.register-page time,.register-page mark,.register-page audio,.register-page video {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+}
+.register-page article,.register-page  aside,.register-page  details,.register-page  figcaption,.register-page  figure,.register-page footer,.register-page  header,.register-page  hgroup,.register-page  menu,.register-page  nav,.register-page  section {
+	display: block;
+}
+.register-page ol,.register-page ul {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+.register-page blockquote,.register-page q {
+	quotes:none;
+}
+.register-page blockquote:before,.register-page blockquote:after,.register-page q:before,.register-page q:after {
+	content:'';
+	content:none;
+}
+.register-page table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+/* start editing from here */
+.register-page a {
+	text-decoration:none;
+}
+.register-page .txt-rt {
+	text-align:right;
+}/* text align right */
+.register-page .txt-lt {
+	text-align:left;
+}/* text align left */
+.register-page .txt-center {
+	text-align:center;
+/*-- W3Layouts --*/	
+}/* text align center */
+.register-page .float-rt {
+	float:right;
+}/* float right */
+.register-page .float-lt {
+	float:left;
+}/* float left */
+.register-page .clear {
+	clear:both;
+}/* clear float */
+.register-page .pos-relative {
+	position:relative;
+}/* Position Relative */
+.register-page .pos-absolute {
+	position:absolute;
+}/* Position Absolute */
+.register-page .vertical-base {	
+	vertical-align:baseline;
+}/* vertical align baseline */
+.register-page .vertical-top {	
+	vertical-align:top;
+}/* vertical align top */
+.register-page nav.vertical ul li {	
+	display:block;
+}/* vertical menu */
+.register-page nav.horizontal ul li {	
+	display: inline-block;
+}/* horizontal menu */
+.register-page img {
+	max-width:100%;
+}
+
+/*--- end reset code ---*/
+
+.register-page body {
+	background:url(./images/banner.jpg) no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	font-family: 'Raleway',sans-serif;
+	font-weight:300;
+}
+.register-page h1.w3ls {
+	font-size:50px;
+	color:#fff;
+	padding:40px 0;
+	text-align:center;
+	/*-- w3layouts --*/ 
+	text-transform:uppercase;
+}
+.register-page .content-w3ls {
+	background-color:#202123;
+	width:70%;
+	margin:0 auto 50px;
+	padding:0;
+}
+.register-page .content-w3ls .content-agile1 {
+    width: 50%;
+    float: left;
+    background: url(./images/content.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    height: 555px;
+}
+.register-page h2.agileits1 {
+    font-size: 40px;
+    font-weight: normal;
+    color: #fff;
+    text-align: Center;
+    padding: 200px 0 15px;
+    text-transform: uppercase;
+	font-family: 'Monoton',cursive;
+}
+.register-page p.agileits2 {
+    font-size: 15px;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+}
+.register-page .content-w3ls .content-agile2 {
+	width: 50%;
+    float: left;
+    padding: 25px 0 0;
+}
+.register-page input#firstname,.register-page input#email,.register-page input#password1,.register-page input#password2 {
+	width:300px;
+	height:50px;
+	padding:0 15px;
+	color:#fff;
+	font-size:17px;
+	font-weight:200;
+	background-color:transparent;
+	/*-- w3layouts --*/ 
+	border-bottom:5px solid #fff;
+	border-top-color:transparent;
+	border-left-color:transparent;
+	border-right-color:transparent;
+	font-family: 'Raleway', sans-serif;
+	margin:0 auto 20px;
+	display:block;
+	outline:none;
+}
+.register-page input#firstname:focus,.register-page input#email:focus,.register-page input#password1:focus,.register-page input#password2:focus,.register-page input#firstname:hover,.register-page input#email:hover,.register-page input#password1:hover,.register-page input#password2:hover {
+	color:#fff;
+	border-bottom:5px solid #3970b0;
+}
+.register-page input::-webkit-input-placeholder {
+color: #fff !important;
+} 
+.register-page input:-moz-placeholder { /* Firefox 18- */
+color: #fff !important;  
+} 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #fff !important;  
+} 
+input:-ms-input-placeholder {  
+color: #fff !important;  
+}
+.register-page input:hover::-webkit-input-placeholder {
+color: #3970b0 !important;
+} 
+.register-page input:hover:-moz-placeholder { /* Firefox 18- */
+color:	#3970b0 !important;  
+} 
+.register-page input:hover::-moz-placeholder {  /* Firefox 19+ */
+color: #3970b0 !important;  
+} 
+.register-page input:hover:-ms-input-placeholder {  
+color: #3970b0 !important;  
+}
+.register-page input.register {
+    width: 335px;
+    margin: 30px auto;
+    display: block;
+    height: 50px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: normal;
+    color: #fff;
+    background-color:#3970b0;
+    border-color: transparent;
+	font-family: 'Raleway', sans-serif;
+	/*-- w3ls --*/
+	transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+	-ms-transition:all 0.5s ease-in-out;
+	cursor:pointer;
+}
+.register-page .register-page input.register:hover {
+	color: #fff;
+    background-color:#3970b0;
+}
+.register-page p.wthree {
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+}
+.register-page ul.social-agileinfo {
+    text-align: center;
+}
+.register-page ul.social-agileinfo li {
+	display:inline-block;
+	margin:0;
+}
+.register-page ul.social-agileinfo li a i.fa {
+	width:40px;
+	height:40px;
+	border:1px solid #fff;
+	text-align:center;
+	line-height:40px;
+	color:#fff;
+}
+.register-page ul.social-agileinfo li a i.fa.fa-facebook:hover {
+	background-color:#3b5998;
+	color:#fff;
+	border-color:#3b5998;
+}
+.register-page ul.social-agileinfo li a i.fa.fa-twitter:hover {
+	background-color:#1da1f2;
+	color:#fff;
+	border-color:#1da1f2;
+}
+.register-page ul.social-agileinfo li a i.fa.fa-youtube:hover {
+	background-color:#cd201f;
+	color:#fff;
+	border-color:#cd201f;
+}
+.register-page ul.social-agileinfo li a i.fa.fa-google-plus:hover {
+	/*-- w3ls --*/
+	background-color:#dd4b39;
+	color:#fff;
+	border-color:#dd4b39;
+}
+.register-page ul.social-agileinfo li a i.fa:hover {
+    -webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+	-moz-animation: spin 2s linear infinite;
+	-o-animation: spin 2s linear infinite;
+	-ms-animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.register-page .register-page p.copyright {
+    font-size: 16px;
+    text-align: center;
+    color: #dadada;
+    line-height: 30px;
+    padding: 20px 10px;
+}
+.register-page p.copyright a {
+	color:#f15f22;
+}
+.register-page p.copyright a:hover {
+	color:#36b051;
+}
+
+/*-- responsive design --*/
+@media (max-width:1600px) {
+	h2.agileits1 {
+	padding: 225px 0 15px;	
+	}
+}
+
+@media (max-width: 1366px) {
+h2.agileits1 {
+    padding: 235px 0 15px;
+}
+}
+
+@media (max-width: 1080px) {
+	/*-- agileits --*/
+	.register-page h1.w3ls {
+    font-size: 40px;
+}
+.register-page .content-w3ls {
+	width:80%;
+	margin: 0 auto 40px;
+}
+.register-page p.agileits2 {
+    font-size: 14px;
+}
+.register-page p.copyright {
+    font-size: 14px;
+}
+.register-page p.wthree {
+    font-size: 14px;
+}
+.register-page input#firstname,.register-page  input#email,.register-page  input#password1,.register-page  input#password2 {
+	font-size:15px;
+}
+}
+
+@media (max-width: 1024px) {
+.register-page .register-page h1.w3ls {
+	padding: 30px 0;
+	font-size:35px;
+}
+}
+
+@media (max-width: 991px) {
+.register-page h2.agileits1 {
+    padding: 230px 0 15px;
+}
+.register-page .content-w3ls {
+    width: 90%;
+}
+}
+
+@media (max-width: 800px) {
+.register-page input#firstname,.register-page  input#email,.register-page  input#password1,.register-page  input#password2 {
+    width: 260px;
+}
+.register-page input.register {
+    width: 295px;
+}
+.register-page p.agileits2 {
+    font-size: 14px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+/*-- agileits --*/
+}
+
+@media (max-width: 768px) {
+.register-page h2.agileits1 {
+    padding: 210px 0 15px;
+}
+}
+
+@media (max-width: 736px) {
+.register-page .content-w3ls .content-agile1 {
+    width: 100%;
+	height:250px;
+}
+.register-page h2.agileits1 {
+    padding: 75px 0 15px;
+}
+.register-page .content-w3ls .content-agile2 {
+    width: 100%;
+    padding: 25px 0 30px;
+}
+.register-page .content-w3ls {
+    width: 65%;
+}
+}
+
+@media (max-width: 600px) {
+.register-page h2.agileits1 {
+    padding: 65px 0 10px;
+}
+}
+
+@media (max-width: 568px) {
+.register-page .content-w3ls {
+    width: 70%;
+}
+}
+
+@media (max-width: 480px) {
+.register-page h2.agileits1 {
+    font-size: 35px;
+}
+}
+
+@media (max-width: 414px) {
+.register-page h1.w3ls {
+    padding: 25px 0;
+    font-size: 30px;
+}
+.register-page .content-w3ls {
+	/*-- agileinfo --*/
+    width: 85%;
+	margin: 0 auto 10px;
+}
+}
+
+@media (max-width: 384px) {
+.register-page input#firstname,.register-page  input#email,.register-page  input#password1,.register-page  input#password2 {
+    width: 230px;
+	height: 40px;
+}
+.register-page input.register {
+    width: 260px;
+	height:45px;
+}
+.register-page p.wthree {
+    font-size: 14px;
+    padding: 0 15px 20px;
+    line-height: 30px;
+}
+}
+
+@media (max-width: 375px) {
+.register-page h1.w3ls {
+    padding: 25px 0;
+    font-size: 27px;
+}
+.register-page h2.agileits1 {
+    font-size: 25px;
+	padding: 43px 0 10px;
+}
+.register-page .content-w3ls .content-agile1 {
+    width: 100%;
+    height: 200px;
+}
+}
+
+@media (max-width: 320px) {
+.register-page h1.w3ls {
+    padding: 25px 0;
+    font-size: 24px;
+}
+.register-page .content-w3ls .content-agile1 {
+    width: 100%;
+    height: 180px;
+}
+.register-page h2.agileits1 {
+    font-size: 22px;
+    padding: 37px 0 10px;
+}
+/*-- agileinfo --*/
+.register-page p.agileits2 {
+    font-size: 13px;
+}
+.register-page input#firstname,.register-page  input#email,.register-page  input#password1,.register-page  input#password2 {
+    width: 195px;
+    height: 40px;
+	font-size: 14px;
+}
+.register-page .content-w3ls {
+    width: 90%;
+    margin: 0 auto;
+}
+.register-page input.register {
+    width: 230px;
+    height: 40px;
+	font-size:15px;
+}
+.register-page p.wthree {
+    font-size: 13px;
+    padding: 0 15px 15px;
+}
+.register-page p.copyright {
+    font-size: 13px;
+}
+}
+
+
+
+
+
+
+/*-- /responsive design --*/
