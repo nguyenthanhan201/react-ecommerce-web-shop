@@ -9,6 +9,7 @@ import Product from "../pages/Product";
 import Register from "../pages/Register";
 import Accessories from "../pages/Accessories";
 import Contact from "../pages/Contact";
+import Login from "../pages/login"
 
 const Routes = () => {
   return (
@@ -19,6 +20,7 @@ const Routes = () => {
       <Route path="/cart" exact component={Cart}></Route>
       <Route path="/accessories" exact component={Accessories}></Route>
       <Route path="/contact" exact component={Contact}></Route>
+      <Route path="/login" exact component={Login}></Route>
       <Route path="/register" exact component={Register}></Route>
     </Switch>
   );

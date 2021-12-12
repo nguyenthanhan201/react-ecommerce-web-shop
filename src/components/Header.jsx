@@ -131,7 +131,9 @@ const Header = () => {
                 </Link>
               </div>
               <div className="header_menu_item header_menu_right_item">
+                <Link to="/login">
                 <i className="bx bx-user"></i>
+                </Link>
               </div>
               <div className="header_menu_item header_menu_right_item">
                 <Link to="/register">

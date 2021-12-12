@@ -10,9 +10,12 @@ import colors from "../assets/fake-data/product-color";
 import size from "../assets/fake-data/product-size";
 import InfinityList from "../components/InfinityList";
 
+
+
 function login() {
-  return <div className="container">
-  <title>Space Login Form Flat Responsive Widget Template :: w3layouts</title>
+  return <div className="containerlogin1">
+   <div>
+        <title>Space Login Form Flat Responsive Widget Template </title>
         {/* Meta tag Keywords */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -28,27 +31,23 @@ function login() {
         <div className="main">
           <div className="main-w3l">
             <h1 className="logo-w3">Space Login Form</h1>
-            <div className="w3layouts-main">
+            <div className="Huynh-main">
               <h2><span>Login now</span></h2>
               <div className="social">
                 <a href="#">Login With Facebook</a>
               </div>
               <h3>(or)</h3>
               <form action="#" method="post">
-                <input placeholder="Username or Email" name="Email" type="email" required />
+                <input placeholder="Username or Email " name="Email" type="email" required />
                 <input placeholder="Password" name="Password" type="password" required />
                 <input type="submit" defaultValue="Get Started" name="login" />
               </form>
               <h6><a href="#">Lost Your Password?</a></h6>
             </div>
-            {/* //main */}
-            {/*footer*/}
-            <div className="footer-w3l">
-              <p>© 2017 Space Login Form. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-            </div>
-            {/*//footer*/}
           </div>
-          </div>
+        </div>
+      </div>
+  
 </div>;
 }
 
