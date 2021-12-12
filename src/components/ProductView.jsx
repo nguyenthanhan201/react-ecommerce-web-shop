@@ -6,7 +6,7 @@ import { withRouter } from "react-router";
 
 import Button from "./Button"
 import numberWithCommans from "../utils/numberWithCommans";
-
+//
 const ProductView = (props) => {
   const product = props.product;
 
