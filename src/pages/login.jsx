@@ -44,12 +44,6 @@ function login() {
               </form>
               <h6><a href="#">Lost Your Password?</a></h6>
             </div>
-            {/* //main */}
-            {/*footer*/}
-            <div className="footer-w3l">
-              <p>© 2021 Space Login Form. All rights reserved | Design by <a href="http://localhost:3000/">localhost:3000</a></p>
-            </div>
-            {/*//footer*/}
           </div>
         </div>
       </div>
